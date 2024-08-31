@@ -6,7 +6,7 @@ export default function Post({_id,title,summary,cover,content,createdAt,author})
   return (
     <div className="post">
       <div className="image">
-        <Link to={`/post/${_id}`}>
+        <Link to={`/post/${_id}`} id="indexpage-show-image">
           <img  src={cover} alt=""/>
         </Link>
       </div>
@@ -16,8 +16,12 @@ export default function Post({_id,title,summary,cover,content,createdAt,author})
         </Link>
         <p className="info">
           <span  className="author">{author.username}</span>
+          <br/>
           <time>{formatISO9075(new Date(createdAt))}</time>
         </p>
+        <Link to={`/post/${_id}`} id="indexpage-hidden-image">
+          <img  src={cover} alt=""/>
+        </Link>
         <p className="summary">{summary}</p>
       </div>
     </div>

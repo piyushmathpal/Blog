@@ -13,9 +13,11 @@ const IndexPages = () => {
   }, []);
 
   return (<>
+  <div className='postbody'>
     {posts.length > 0 && posts.map(post => (
       <Post key={post._id} {...post} />
     ))}
+    </div>
   </>)
 }
 

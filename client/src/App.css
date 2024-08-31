@@ -1,5 +1,7 @@
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 a{
   cursor: pointer;
@@ -11,42 +13,68 @@ body{
   max-width: 100%;
 } */
 main{
-  padding: 10px;
-  max-width: 960px;
+  padding: 0px;
   margin: 0 auto;
+  background-color: #dff7f3;
+  min-height: 100vh;
+  height:100%;
 }
 header{
   display:flex;
   justify-content:space-between;
-  margin-top: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #3295a8;
   margin-bottom: 50px;
   align-items: center;
 }
 header a{
   text-decoration:none;
-  color: inherit;
+  color: wheat;
+  font-weight: bold;
+  padding: 10px;
+
 }
 header a.logo{
   font-weight: bold;
   font-size: 1.5rem;
+  padding-left: 20px;
+  color: wheat;
 }
 header nav{
   display:flex;
   gap: 24px;
 }
+.postbody{
+  margin: auto;
+  max-width: 960px;
+}
 
 div.post{
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
   margin-bottom: 30px;
+  max-width: 960px;
 }
-@media screen and (min-width: 700px) {
-  div.post{
-      grid-template-columns: .9fr 1.1fr;
-  }
+#indexpage-show-image{
+  display: none;
 }
-
+  @media screen and (min-width: 700px) {
+    div.post{
+        grid-template-columns: 1fr 2fr;
+  
+    }
+    #indexpage-hidden-image{
+      display: none
+    }
+    #indexpage-show-image{
+      display: inherit;
+    }
+}
+div.post div.image img{
+  top: 0%;
+}
 div.post div.texts h2{
   margin:0;
   font-size: 2rem;
@@ -69,6 +97,12 @@ div.post p.info a.author{
 div.post p.summary{
   margin:10px 0;
   line-height: 1.8rem;
+  
+}
+div.post img{
+  object-fit:contain;
+  height :300px;
+  width:300px;
 }
 
 form.login, form.register{
@@ -97,7 +131,10 @@ button{
 form.login h1, form.register h1{
   text-align: center;
 }
-
+div.post-page{
+  margin: auto;
+  max-width: 960px;
+}
 div.post-page div.image{
   max-height:300px;
   display: flex;
@@ -136,6 +173,8 @@ div.content p{
 }
 div.content li{
   margin-bottom: 10px;
+  
+  
 }
 div.edit-row{
   text-align: center;
@@ -155,9 +194,12 @@ div.post-page a.edit-btn{
 a svg{
   height:20px;
 }
-div.post img{
-  object-fit:contain;
 
-  height :400px;
-  width:400px
+
+div.content strong,p,span, div.content a{
+  background-color: #dff7f3 !important;
+}
+.create-post-form{
+  max-width: 960px;
+  margin: auto;
 }

@@ -44,8 +44,8 @@ export default function CreatePost() {
   return (
    
 <>
-   
-   {username&& <form onSubmit={createNewPost}>
+<div className='create-post-form'>
+{username&& <form  onSubmit={createNewPost}>
       <input type="title"
              placeholder={'Title'}
              value={title}
@@ -60,6 +60,9 @@ export default function CreatePost() {
       <button style={{marginTop:'5px'}}>Create post</button>
     </form>
   }
+</div>
+   
+   
   </>
   );
 }

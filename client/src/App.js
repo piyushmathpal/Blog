@@ -8,6 +8,7 @@ import {UserContextProvider} from "./UserContext";
 import CreatePost from "./pages/CreatePost";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
+import MyPosts from './pages/MyPosts';
 
 function App() {
   // console.log(process.env.REACT_APP_URI);
@@ -21,6 +22,7 @@ function App() {
           <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostPage />} />
           <Route path="/edit/:id" element ={<EditPost />} />
+          <Route path="myposts" element={<MyPosts/>}/>
         </Route>
       </Routes>
     </UserContextProvider>
